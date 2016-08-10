@@ -3,6 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 LOCAL_CERTIFICATE := platform
+<<<<<<< HEAD
 LOCAL_PRIVILEGED_MODULE := true
 LOCAL_PACKAGE_NAME := ConfigPanel
 
@@ -30,7 +31,10 @@ LOCAL_RESOURCE_DIR := \
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
+=======
+>>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_PACKAGE_NAME := ConfigPanel
 LOCAL_MODULE_TAGS := optional
 
 include frameworks/base/packages/SettingsLib/common.mk
