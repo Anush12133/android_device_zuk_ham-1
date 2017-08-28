@@ -163,6 +163,7 @@ vendor/lib/libmmosal.so
 vendor/bin/mpdecision
 vendor/lib/libqti-perfd-client.so
 
+<<<<<<< HEAD
 # Postprocessing
 vendor/bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
@@ -206,6 +207,7 @@ etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 framework/qcnvitems.jar|2bf9f56844bf7548cc7aa85a8115e5d6644e81f3
 framework/qcrilhook.jar|9ea6c63ea7dc0b52c5d81d6dc62b0b0deeb4168c
 framework/ConnectivityExt.jar|99fc5c3f2077578086ad5b4e6338a822949ec753
+framework/qti-telephony-common.jar
 vendor/lib/libmdmdetect.so|3656cdf75f1ad9df3de34dc24ba8713ad29adafc
 vendor/lib/libcneapiclient.so|b01a71ce28e9e33a7d6d88a90d37a1aa977abce9
 vendor/lib/libconfigdb.so|7116f6a9872991ea934bb3618fbb9b29787f3a74
@@ -215,6 +217,7 @@ vendor/lib/libperipheral_client.so|aae1a211854c6327b226f9018192c57571e31c5f
 vendor/lib/libril-qc-qmi-1.so|f6ac6babaf75a7f1072f0217a69e148bee95c634
 vendor/lib/libril-qcril-hook-oem.so|cfdd208a21588c45fb47bae07236ac1efb5e2e53
 vendor/lib/libxml.so|2be093edb84b0d158cd1963d762930cf2572e8e2
+vendor/lib/libril-qc-ltedirectdisc.so
 
 # Sensors - old blobs
 vendor/bin/sensors.qcom|cb99b6a2b6442ce0d86a8d427891623d172365ce
