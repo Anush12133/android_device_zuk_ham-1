@@ -250,24 +250,26 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
 
-# Properties
+#IMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    net.lte.volte_call_capable=true \
-    persist.ims.enableADBLogs=1 \
-    persist.ims.enableDebugLogs=1 \
-    persist.radio.calls.on.ims=true \
-    persist.radio.csvt.enabled=false \
+    DEVICE_PROVISIONED=1 \
     persist.radio.jbims=1 \
     persist.radio.ROTATION_ENABLE=1 \
     persist.radio.VT_ENABLE=1 \
     persist.radio.VT_HYBRID_ENABLE=1 \
     persist.radio.VT_USE_MDM_TIME=0 \
+    service.qti.ims.enabled=1 \
+    telephony.lteOnCdmaDevice=1 \
+    net.lte.volte_call_capable=true \
+    persist.ims.enableADBLogs=1 \
+    persist.ims.enableDebugLogs=1 \
+    persist.radio.calls.on.ims=true \
+    persist.radio.csvt.enabled=false \
     persist.dbg.volte_avail_ovr=1 \
-    persist.volte_enalbed_by_hw=1 \
-    persist.dbg.volte_avail_ovr=1 \
+    persist.volte_enabled_by_hw=1 \
     persist.dbg.vt_avail_ovr=1 \
+    persist.data.iwlan.enable=true \
     persist.dbg.wfc_avail_ovr=1
-
 
 # USB
 PRODUCT_PACKAGES += \
