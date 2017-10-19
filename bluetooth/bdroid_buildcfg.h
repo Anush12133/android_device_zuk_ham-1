@@ -6,7 +6,11 @@
  *
  * Copyright (C) 2012 The Android Open Source Project
  * Copyright (C) 2014 The CyanogenMod Project
+<<<<<<< HEAD
  * Copyright (C) 2017 The LineageOS Project
+=======
+ *           (C) 2017 The LineageOS Project
+>>>>>>> e5444d5... ham: Update copyrights for Lineage
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
