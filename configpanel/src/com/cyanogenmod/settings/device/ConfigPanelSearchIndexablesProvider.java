@@ -1,9 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
-<<<<<<< HEAD
  *           (C) 2017 The LineageOS Project
-=======
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,11 +15,6 @@
  */
 
 package com.cyanogenmod.settings.device;
-
-<<<<<<< HEAD
-=======
-
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.provider.SearchIndexableResource;
@@ -44,13 +35,6 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
     private static final String TAG = "ConfigPanelSearchIndexablesProvider";
 
     public static final int SEARCH_IDX_BUTTON_PANEL = 0;
-<<<<<<< HEAD
-
-    private static SearchIndexableResource[] INDEXABLE_RES = new SearchIndexableResource[]{
-            new SearchIndexableResource(1, R.xml.button_panel,
-                    ButtonSettingsActivity.class.getName(),
-                    R.drawable.ic_settings_additional_buttons),
-=======
     public static final int SEARCH_IDX_GESTURE_PANEL = 1;
     public static final int SEARCH_IDX_OCLICK_PANEL = 2;
     public static final int SEARCH_IDX_TOUCHSCREEN_PANEL = 3;
@@ -68,7 +52,6 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
             new SearchIndexableResource(1, R.xml.touchscreen_panel,
                     TouchscreenGestureSettings.class.getName(),
                     R.drawable.ic_settings_gestures),
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
     };
 
     @Override
@@ -82,8 +65,6 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
         if (Startup.hasButtonProcs() /* show button panel */) {
             cursor.addRow(generateResourceRef(INDEXABLE_RES[SEARCH_IDX_BUTTON_PANEL]));
         }
-<<<<<<< HEAD
-=======
         if (Startup.hasGestureService(getContext()) /* show gesture panel */) {
             cursor.addRow(generateResourceRef(INDEXABLE_RES[SEARCH_IDX_GESTURE_PANEL]));
         }
@@ -93,7 +74,6 @@ public class ConfigPanelSearchIndexablesProvider extends SearchIndexablesProvide
         if (Startup.hasTouchscreenGestures() /* show touchscreen panel */) {
             cursor.addRow(generateResourceRef(INDEXABLE_RES[SEARCH_IDX_TOUCHSCREEN_PANEL]));
         }
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
         return cursor;
     }
 

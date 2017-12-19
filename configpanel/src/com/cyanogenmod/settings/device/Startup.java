@@ -33,9 +33,7 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         final String action = intent.getAction();
-<<<<<<< HEAD
-        if (cyanogenmod.content.Intent.ACTION_INITIALIZE_CM_HARDWARE.equals(action)) {
-=======
+
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)
                 || Intent.ACTION_PRE_BOOT_COMPLETED.equals(action)) {
             // Disable touchscreen gesture settings if needed
@@ -78,7 +76,6 @@ public class Startup extends BroadcastReceiver {
                 toggleDoubleTap(context, sInstance, Constants.isPreferenceEnabled(
                         context, Constants.TOUCHPAD_DOUBLETAP_KEY));
             }
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
 
             // Disable button settings if needed
             if (!hasButtonProcs()) {
@@ -105,10 +102,6 @@ public class Startup extends BroadcastReceiver {
         }
     }
 
-<<<<<<< HEAD
-    static boolean hasButtonProcs() {
-        return (FileUtils.fileExists(Constants.BUTTON_SWAP_NODE));
-=======
     public static void toggleDoubleTap(Context context, IGestureService gestureService,
             boolean enable) {
         PendingIntent pendingIntent = null;
@@ -163,7 +156,6 @@ public class Startup extends BroadcastReceiver {
             new File(Constants.NOTIF_SLIDER_MIDDLE_NODE).exists() &&
             new File(Constants.NOTIF_SLIDER_BOTTOM_NODE).exists()) ||
             new File(Constants.BUTTON_SWAP_NODE).exists();
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
     }
 
     static boolean hasOClick() {
@@ -188,9 +180,6 @@ public class Startup extends BroadcastReceiver {
                     PackageManager.DONT_KILL_APP);
         }
     }
-<<<<<<< HEAD
-=======
-
     private void updateOClickServiceState(Context context) {
         BluetoothManager btManager = (BluetoothManager)
                 context.getSystemService(Context.BLUETOOTH_SERVICE);
@@ -207,5 +196,4 @@ public class Startup extends BroadcastReceiver {
             context.stopService(serviceIntent);
         }
     }
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
 }

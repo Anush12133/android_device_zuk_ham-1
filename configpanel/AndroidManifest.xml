@@ -40,8 +40,6 @@
             android:grantUriPermissions="true"
             android:permission="android.permission.READ_SEARCH_INDEXABLES"
             android:exported="true">
-<<<<<<< HEAD
-=======
             <intent-filter>
                 <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
             </intent-filter>
@@ -53,7 +51,6 @@
             android:launchMode="singleTop"
 
             android:label="@string/oclick_panel_title">
->>>>>>> efbb2c1... ConfigPanel: add Settings search indexing
             <intent-filter>
                 <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
             </intent-filter>
