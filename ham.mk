@@ -66,7 +66,10 @@ PRODUCT_PACKAGES += \
     libqcomvisualizer \
     libqcomvoiceprocessing \
     libtfa98xx \
+<<<<<<< HEAD
     libqcomvoiceprocessingdescriptors \
+=======
+>>>>>>> parent of 33c5d97... ham : Disable VoIP offload
     tinymix
 
 PRODUCT_PROPERTY_OVERRIDES += \
