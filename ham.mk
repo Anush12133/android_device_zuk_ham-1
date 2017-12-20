@@ -65,11 +65,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-<<<<<<< HEAD:ham.mk
     libtfa98xx \
-=======
     libqcomvoiceprocessingdescriptors \
->>>>>>> bc6fceb... bacon: Disable VoIP offload:bacon.mk
     tinymix
 
 PRODUCT_PROPERTY_OVERRIDES += \
