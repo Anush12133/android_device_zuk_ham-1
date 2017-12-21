@@ -27,44 +27,25 @@
  *
  */
 
-#ifndef __MM_JPEG_DBG_H__
-#define __MM_JPEG_DBG_H__
+#include "cam_intf.h"
 
-#define LOG_DEBUG
+void *POINTER_OF_PARAM(cam_intf_parm_type_t PARAM_ID,
+                 void *table_ptr)
+{
+  parm_buffer_new_t *TABLE_PTR = (parm_buffer_new_t *)table_ptr;
+  int32_t j = 0, i = TABLE_PTR->num_entry;
+  parm_entry_type_new_t *curr_param =
+              (parm_entry_type_new_t *)&TABLE_PTR->entry[0];
 
-#ifndef LOG_DEBUG
-  #ifdef _ANDROID_
-    #undef LOG_NIDEBUG
-    #undef LOG_TAG
-    #define LOG_NIDEBUG 0
-    #define LOG_TAG "mm-jpeg-intf"
-    #include <utils/Log.h>
-  #else
-    #include <stdio.h>
-    #define ALOGE CDBG
-  #endif
-  #undef CDBG
-  #define CDBG(fmt, args...) do{}while(0)
-#else
-  #ifdef _ANDROID_
-    #undef LOG_NIDEBUG
-    #undef LOG_TAG
-    #define LOG_NIDEBUG 0
-    #define LOG_TAG "mm-jpeg-intf"
-    #include <utils/Log.h>
-    #define CDBG(fmt, args...) ALOGE(fmt, ##args)
-  #else
-    #include <stdio.h>
-    #define CDBG(fmt, args...) fprintf(stderr, fmt, ##args)
-    #define ALOGE(fmt, args...) fprintf(stderr, fmt, ##args)
-  #endif
-#endif
+  for (j = 0; j < i; j++) {
+    if (PARAM_ID == curr_param->entry_type) {
+      return (void *)&curr_param->data[0];
+    }
+    curr_param = GET_NEXT_PARAM(curr_param, parm_entry_type_new_t);
+  }
+  curr_param = (parm_entry_type_new_t *)&TABLE_PTR->entry[0];
+  return (void *)&curr_param->data[0]; //should not be coming here
+                                       //this is just to prevent a crash
+                                       //for the caller
+}
 
-#ifdef _ANDROID_
-  #define CDBG_HIGH(fmt, args...)  ALOGE(fmt, ##args)
-  #define CDBG_ERROR(fmt, args...)  ALOGE(fmt, ##args)
-#else
-  #define CDBG_HIGH(fmt, args...) fprintf(stderr, fmt, ##args)
-  #define CDBG_ERROR(fmt, args...) fprintf(stderr, fmt, ##args)
-#endif
-#endif /* __MM_JPEG_DBG_H__ */

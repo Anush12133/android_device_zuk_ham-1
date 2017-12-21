@@ -49,6 +49,7 @@ ro.qualcomm.bluetooth.opp=true
 ro.qualcomm.bluetooth.pbap=true
 
 
+<<<<<<< HEAD
 # Camera
 camera.display.umax=1920x1080
 camera.display.lmax=1280x720
@@ -65,6 +66,10 @@ vendor.vidc.dec.downscalar_height=1088
 media.camera.ts.monotonic=1
 persist.camera.time.monotonic=1
 camera.force_disable_video_stabilization=1
+=======
+# camera
+camera2.portability.force_api=1
+>>>>>>> parent of 32e4dff... ham : stack cammera needs some fixes
 media.stagefright.legacyencoder=true
 
 
