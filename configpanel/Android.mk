@@ -29,8 +29,8 @@ LOCAL_RESOURCE_DIR := \
     frameworks/support/v7/recyclerview/res
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_PACKAGE_NAME := ConfigPanel
 LOCAL_MODULE_TAGS := optional
 
 include frameworks/base/packages/SettingsLib/common.mk

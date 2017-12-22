@@ -25,7 +25,11 @@ public class TouchscreenGestureSettings extends PreferenceActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.gesture_panel);
+
+        // Remove padding around the listview
+         getListView().setPadding(0, 0, 0, 0);
     }
+
 
     @Override
     protected void onResume() {

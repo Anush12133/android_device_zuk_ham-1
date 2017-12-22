@@ -45,6 +45,17 @@
             </intent-filter>
         </provider>
 
+        <service android:name=".OclickService" />
+        <activity
+            android:name=".BluetoothInputSettings"
+            android:launchMode="singleTop"
+
+            android:label="@string/oclick_panel_title">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER" />
+            </intent-filter>
+        </provider>
+
         <activity
             android:name=".ButtonSettingsActivity"
             android:label="@string/button_panel_title">
