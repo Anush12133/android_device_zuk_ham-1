@@ -32,6 +32,12 @@ persist.radio.custom_ecc=1
 # enable multisim
 persist.radio.multisim.config=dsds
 
+# audio
+ro.qc.sdk.audio.fluencetype=none 
+persist.audio.fluence.voicerec=true 
+persist.audio.fluence.speaker=false 
+use.voice.path.for.pcm.voip=true
+
 # bluetooth
 qcom.bluetooth.soc=smd
 bluetooth.hfp.client=1
