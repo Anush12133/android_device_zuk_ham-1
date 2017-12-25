@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     fingerprint.msm8974 \
     HamPocketMode
 
+# HIDL
+PRODUCT_PACKAGES += \
+    android.hidl.manager@1.0-java
+
 # VNDK-SP:
 PRODUCT_PACKAGES += \
    vndk-sp
