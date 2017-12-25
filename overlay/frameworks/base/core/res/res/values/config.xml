@@ -161,51 +161,10 @@
          Zone N:        array[N - 1] <= LUX < array[N]
          Zone N + 1     array[N] <= LUX < infinity
 
-<<<<<<< HEAD
-         Must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLevels">
-        <item>5</item>
-        <item>54</item>
-        <item>109</item>
-        <item>163</item>
-        <item>272</item>
-        <item>362</item>
-        <item>634</item>
-        <item>815</item>
-        <item>996</item>
-        <item>1303</item>
-        <item>1560</item>
-        <item>1820</item>
-        <item>2215</item>
-        <item>2550</item>
-    </integer-array>
 
-    <!-- Array of output values for LCD backlight corresponding to the LUX values
-         in the config_autoBrightnessLevels array.  This array should have size one greater
-         than the size of the config_autoBrightnessLevels array.
-         This must be overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>1</item>
-        <item>12</item>
-        <item>45</item>
-        <item>45</item>
-        <item>45</item>
-        <item>45</item>
-        <item>62</item>
-        <item>79</item>
-        <item>102</item>
-        <item>119</item>
-        <item>141</item>
-        <item>160</item>
-        <item>190</item>
-        <item>220</item>
-        <item>255</item>
-    </integer-array>
-=======
     <!-- Flag indicating whether the we should enable the automatic brightness in Settings.
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
     <bool name="config_automatic_brightness_available">true</bool>
->>>>>>> 0d88871... msm8974: update lights overlay
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
