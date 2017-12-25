@@ -1,8 +1,33 @@
 LOCAL_PATH := $(call my-dir)
+VNDK_SP_LIBRARIES := \
+    libRS_internal\
+    libRSDriver\
+    libRSCpuRef\
+    libbcinfo\
+    libblas\
+    libft2\
+    libpng\
+    libcompiler_rt\
+ifndef BOARD_VNDK_VERSION
+VNDK_SP_LIBRARIES += \
+    android.hardware.renderscript@1.0\
+    android.hardware.graphics.allocator@2.0\
+    android.hardware.graphics.mapper@2.0\
+    android.hardware.graphics.common@1.0\
+    libhwbinder\
+    libbase\
+    libcutils\
+    libhardware\
+    libutils\
+    libc++\
+    libbacktrace\
+    libunwind\
+    liblzma\
+    libhidlbase\
+    libhidltransport\
+endif
 
-include $(LOCAL_PATH)/vndk-sp-libs.mk
-
-define define-vndk-sp-lib
+define add-vndk-sp-lib
 include $$(CLEAR_VARS)
 LOCAL_MODULE := $1.vndk-sp-gen
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
