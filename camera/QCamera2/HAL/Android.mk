@@ -47,7 +47,7 @@ LOCAL_C_INCLUDES := \
         frameworks/native/include \
         frameworks/native/libs/nativewindow/include \
         frameworks/native/include/media/openmax \
-        hardware/qcom/display/msm8974/libgralloc \
+        hardware/qcom/display-caf/msm8974/libgralloc \
         hardware/qcom/media/msm8974/libstagefrighthw \
         $(LOCAL_PATH)/../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
@@ -61,7 +61,7 @@ LOCAL_CFLAGS += -DUSE_KK_CODE
 endif
 
 ifeq ($(TARGET_USE_VENDOR_CAMERA_EXT),true)
-LOCAL_C_INCLUDES += $(call project-path-for,qcom-display)/msm8974/libgralloc
+LOCAL_C_INCLUDES += $(call project-path-for,qcom)display-caf/msm8974/libgralloc
 else
 LOCAL_C_INCLUDES += $(call project-path-for,qcom-display)/libgralloc
 endif

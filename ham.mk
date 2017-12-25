@@ -243,7 +243,7 @@ PRODUCT_COPY_FILES += \
 
 # VR
 PRODUCT_PACKAGES += \
-    vr.msm8974
+    vr.msm8974 \
     android.hardware.vr@1.0-impl \
     android.hardware.vr@1.0-service
 
