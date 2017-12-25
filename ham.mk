@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    liboverlay
+    libgenlock \
+    liboverlay 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
@@ -237,6 +238,8 @@ PRODUCT_COPY_FILES += \
 # VR
 PRODUCT_PACKAGES += \
     vr.msm8974
+    android.hardware.vr@1.0-impl \
+    android.hardware.vr@1.0-service
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vr.high_performance.xml:system/etc/permissions/android.hardware.vr.high_performance.xml
@@ -255,7 +258,8 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-impl
+    android.hardware.vibrator@1.0-impl \
+    android.hardware.vibrator@1.0-service
     
  # WiFi HAL
 PRODUCT_PACKAGES += \
@@ -358,6 +362,9 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
+# MSM8974 Headers
+PRODUCT_KERNEL_HEADERS := device/zuk/ham/kernel-headers
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
