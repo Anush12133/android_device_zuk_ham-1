@@ -36,13 +36,23 @@ LOCAL_C_INCLUDES := \
         frameworks/native/libs/nativewindow/include \
         frameworks/av/include \
         hardware/qcom/media/msm8974/libstagefrighthw \
-        hardware/qcom/display-caf/msm8974/libgralloc \
+        hardware/qcom/display/msm8960/libgralloc \
         system/media/camera/include \
         $(LOCAL_PATH)/../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
         $(LOCAL_PATH)/../util
 
+ifeq ($(call is-platform-sdk-version-at-least,20),true)
+LOCAL_C_INCLUDES += system/media/camera/include
+else
+LOCAL_CFLAGS += -DUSE_KK_CODE
+endif
 
+ifeq ($(TARGET_USE_VENDOR_CAMERA_EXT),true)
+LOCAL_C_INCLUDES += $(call project-path-for,qcom)display/msm8960/libgralloc
+else
+LOCAL_C_INCLUDES += $(call project-path-for,qcom-display)/libgralloc
+endif
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
 LOCAL_ADDITIONAL_DEPENDENCIES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 

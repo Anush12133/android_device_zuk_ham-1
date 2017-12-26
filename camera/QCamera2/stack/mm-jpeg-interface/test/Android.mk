@@ -24,8 +24,8 @@ LOCAL_C_INCLUDES := $(MM_JPEG_TEST_PATH)
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../inc
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../../common
 LOCAL_C_INCLUDES += $(OMX_HEADER_DIR)
-LOCAL_C_INCLUDES += $(OMX_CORE_DIR)/qexif
-LOCAL_C_INCLUDES += $(OMX_CORE_DIR)/qomx_core
+LOCAL_C_INCLUDES += device/zuk/ham/camera/mm-image-codec/qexif
+LOCAL_C_INCLUDES += device/zuk/ham/camera/mm-image-codec/qomx_core
 
 ifneq ($(strip $(USE_BIONIC_HEADER)),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
@@ -68,8 +68,8 @@ LOCAL_C_INCLUDES := $(MM_JPEG_TEST_PATH)
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../inc
 LOCAL_C_INCLUDES += $(MM_JPEG_TEST_PATH)/../../common
 LOCAL_C_INCLUDES += $(OMX_HEADER_DIR)
-LOCAL_C_INCLUDES += $(OMX_CORE_DIR)/qexif
-LOCAL_C_INCLUDES += $(OMX_CORE_DIR)/qomx_core
+LOCAL_C_INCLUDES += device/zuk/ham/camera/mm-image-codec/qexif
+LOCAL_C_INCLUDES += device/zuk/ham/camera/mm-image-codec/qomx_core
 
 ifneq ($(strip $(USE_BIONIC_HEADER)),true)
 LOCAL_C_INCLUDES += $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include
