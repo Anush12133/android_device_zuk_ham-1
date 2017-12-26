@@ -433,8 +433,6 @@ service audiod /system/vendor/bin/audiod
     class late_start
     user system
     group system
-<<<<<<< HEAD
-=======
     disabled
 
 service ril-daemon /vendor/bin/hw/rild
@@ -448,7 +446,6 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     group radio cache inet misc audio log readproc wakelock net_raw
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
->>>>>>> d345d71... op3: update ril-daemon for O
 
 service wcnss-service /system/vendor/bin/wcnss_service
     class main
