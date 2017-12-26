@@ -150,12 +150,7 @@
     <!-- bool value to for enabling motion accelerometer -->
     <!-- <bool name="use_motion_accel">false</bool> -->
 
-<<<<<<< HEAD
     <bool name="config_automatic_brightness_available">true</bool>
-=======
-    <!-- Boolean indicating whether Hotspot 2.0/Passpoint and ANQP queries is enabled -->
-  <!--  <bool translatable="false" name="config_wifi_hotspot2_enabled">true</bool> -->
->>>>>>> 642080a... omni Bringup
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
@@ -274,23 +269,7 @@
          rmem_min,rmem_def,rmem_max,wmem_min,wmem_def,wmem_max -->
     <string name="config_wifi_tcp_buffers" translatable="false">524288,2097152,4194304,262144,524288,1048576</string>
    
-<<<<<<< HEAD
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
-=======
-   <!--  <bool name="config_proximityCheckOnWake">true</bool>
-    <integer name="config_proximityCheckTimeout">800</integer>
-    <bool name="config_proximityCheckOnWakeEnabledByDefault">true</bool> -->
 
-    <!-- Whether home button can wake device
-    <bool name="config_homeCanWake">true</bool> -->
-
-    <!-- Stop listening to the fingerprint reader when NON-WAKEUP proximity sensor is covered & screen is off.
-         config_proximityCheckOnWake must be true. -->
-   <!-- <bool name="config_proximityCheckOnFingerprintWake">true</bool> -->
-
-    <!-- Whether notify fingerprint client of successful cancelled authentication -->
-   <!-- <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool> -->
- 
->>>>>>> 642080a... omni Bringup
 </resources>
