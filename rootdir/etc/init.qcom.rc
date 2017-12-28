@@ -304,6 +304,10 @@ service sensors /system/vendor/bin/sensors.qcom
     user root
     group root
 
+#dt2w
+    write /proc/touchpanel/double_tap_enable 1
+
+
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
 on property:ro.data.large_tcp_window_size=true
