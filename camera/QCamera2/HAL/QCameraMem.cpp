@@ -1151,17 +1151,10 @@ void *QCameraStreamMemory::getPtr(int index) const
  *
  * RETURN     : none
  *==========================================================================*/
-<<<<<<< HEAD
-QCameraVideoMemory::QCameraVideoMemory(camera_request_memory getMemory,
-                                       void* cbCookie,
-                                       bool cached)
-    : QCameraStreamMemory(getMemory, cbCookie, cached)
-=======
 QCameraVideoMemory::QCameraVideoMemory(camera_request_memory memory,
                                        void* cbCookie,
                                        bool cached)
     : QCameraStreamMemory(memory, cbCookie, cached)
->>>>>>> 766cbb2... jalebi: Camera: fix HAL1 callback cookie
 {
     memset(mMetadata, 0, sizeof(mMetadata));
     memset(mNativeHandle, 0, sizeof(mNativeHandle));
@@ -1668,11 +1661,8 @@ int QCameraGrallocMemory::allocate(int count, int /*size*/)
                     mPrivateHandle[cnt]->size,
                     1,
                     mCallbackCookie);
-<<<<<<< HEAD
-        ALOGV("%s: idx = %d, fd = %d, size = %d, offset = %d",
-=======
+
         CDBG("%s: idx = %d, fd = %d, size = %d, offset = %d",
->>>>>>> 766cbb2... jalebi: Camera: fix HAL1 callback cookie
               __func__, cnt, mPrivateHandle[cnt]->fd,
               mPrivateHandle[cnt]->size,
               mPrivateHandle[cnt]->offset);
