@@ -111,8 +111,7 @@ PRODUCT_PACKAGES += \
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.0-service.widevine
+    android.hardware.drm@1.0-service 
 
 #Doze
 PRODUCT_PACKAGES += \
@@ -123,10 +122,6 @@ PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service \
     fingerprint.msm8974 \
     HamPocketMode
-
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.manager@1.0-java
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
