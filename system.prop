@@ -73,11 +73,6 @@ persist.camera.time.monotonic=1
 camera.force_disable_video_stabilization=1
 media.stagefright.legacyencoder=true
 
-#volte
-persist.radio.rat_on=combine 
-persist.radio.data_ltd_sys_ind=1 
-persist.radio.data_con_rprt=1 
-persist.radio.calls.on.ims=1
 
 # sensors
 ro.qc.sdk.camera.facialproc=true

@@ -35,8 +35,8 @@ LOCAL_C_INCLUDES := \
         frameworks/native/include \
         frameworks/native/libs/nativewindow/include \
         frameworks/av/include \
-        hardware/qcom/media/msm8974/libstagefrighthw \
-        hardware/qcom/display-caf/msm8974/libgralloc \
+        $(call project-path-for,qcom-display)/libgralloc \
+        $(call project-path-for,qcom-media)/libstagefrighthw \
         system/media/camera/include \
         $(LOCAL_PATH)/../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../mm-image-codec/qomx_core \
