@@ -201,10 +201,8 @@ PROTOBUF_SUPPORTED := true
 #BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    WITH_DEXPREOPT_COMP ?= false
   endif
 endif
 
