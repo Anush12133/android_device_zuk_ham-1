@@ -97,13 +97,15 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-service \
     libbt-vendor
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/iot_devlist.conf:system/etc/bluetooth/iot_devlist.conf
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.device@1.0-impl-legacy \
     camera.msm8974 \
-    Snap \
-    ParanoidCamera
+    Snap 
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -111,9 +113,9 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.0-impl \
-    android.hardware.drm@1.0-service \
-    android.hardware.drm@1.0-service.widevine
+    android.hardware.drm@1.0-service \ 
+    android.hardware.drm@1.0-impl 
+   
 
 #Doze
 PRODUCT_PACKAGES += \
@@ -126,8 +128,8 @@ PRODUCT_PACKAGES += \
     HamPocketMode
 
 # HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.manager@1.0-java
+#PRODUCT_PACKAGES += \
+#android.hidl.manager@1.0-java
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
@@ -159,7 +161,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/flp.conf:system/etc/flp.conf \
     $(LOCAL_PATH)/gps/etc/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf
+    $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -216,7 +219,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@1.0-impl
+    android.hardware.sensors@1.0-impl 
+
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
@@ -323,10 +327,13 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # ANT+
-#PRODUCT_PACKAGES += \
-    #AntHalService \
-    #com.dsi.ant.antradio_library \
-    #libantradio
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+ 
+PRODUCT_COPY_FILES += \
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Enable Bluetooth HFP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -359,6 +366,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:system/etc/permissions/android.hardware.fingerprint.xml \
     frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml \
     frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
     frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.compass.xml \
     frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
@@ -367,6 +375,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:system/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
