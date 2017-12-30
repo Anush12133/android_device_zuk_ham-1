@@ -178,7 +178,6 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 
 # PowerHAL
 TARGET_POWERHAL_VARIANT := qcom
-TARGET_DT2W_PATH := /sys/class/sec/tsp/input/rmii2c/wake_gesture
 
 # QCRIL
 TARGET_RIL_VARIANT := caf
