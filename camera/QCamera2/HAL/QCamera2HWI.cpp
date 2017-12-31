@@ -1603,7 +1603,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(cam_stream_type_t st
                 mem = new QCameraStreamMemory(mGetMemory,
                         mCallbackCookie,
                         bCachedMem,
-                        (bPoolMem) ? &m_memoryPool : NULL,
+                        &m_memoryPool,
                         stream_type);
             } else {
                 cam_dimension_t dim;
@@ -1648,15 +1648,11 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(cam_stream_type_t st
         mem = new QCameraStreamMemory(mGetMemory,
                 mCallbackCookie,
                 bCachedMem,
-                (bPoolMem) ? &m_memoryPool : NULL,
+                &m_memoryPool,
                 stream_type);
         break;
     case CAM_STREAM_TYPE_VIDEO:
         {
-            //Use uncached allocation by default
-            bCachedMem = mParameters.isVideoBuffersCached();
-            CDBG_HIGH("%s: %s video buf allocated ", __func__,
-                    (bCachedMem == 0) ? "Uncached" : "Cached" );
             QCameraVideoMemory *videoMemory = new QCameraVideoMemory(mGetMemory, mCallbackCookie, bCachedMem);
             mem = videoMemory;
             mVideoMem = videoMemory;
