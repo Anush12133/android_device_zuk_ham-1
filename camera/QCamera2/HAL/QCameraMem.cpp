@@ -1661,6 +1661,10 @@ int QCameraGrallocMemory::allocate(int count, int /*size*/)
                     mPrivateHandle[cnt]->size,
                     1,
                     mCallbackCookie);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 75d1642771f49d94e97d6bd93d999ca3b3b0bd22
         ALOGV("%s: idx = %d, fd = %d, size = %d, offset = %d",
               __func__, cnt, mPrivateHandle[cnt]->fd,
               mPrivateHandle[cnt]->size,

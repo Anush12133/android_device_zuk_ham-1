@@ -163,7 +163,6 @@ vendor/lib/libmmosal.so
 vendor/bin/mpdecision
 vendor/lib/libqti-perfd-client.so
 
-<<<<<<< HEAD
 # Postprocessing
 vendor/bin/mm-pp-daemon
 vendor/lib/libdisp-aba.so
