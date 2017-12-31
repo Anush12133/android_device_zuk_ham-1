@@ -1151,10 +1151,10 @@ void *QCameraStreamMemory::getPtr(int index) const
  *
  * RETURN     : none
  *==========================================================================*/
-QCameraVideoMemory::QCameraVideoMemory(camera_request_memory memory,
+QCameraVideoMemory::QCameraVideoMemory(camera_request_memory getMemory,
                                        void* cbCookie,
                                        bool cached)
-    : QCameraStreamMemory(memory, cbCookie, cached)
+    : QCameraStreamMemory(getMemory, cbCookie, cached)
 {
     memset(mMetadata, 0, sizeof(mMetadata));
     memset(mNativeHandle, 0, sizeof(mNativeHandle));
@@ -1661,8 +1661,7 @@ int QCameraGrallocMemory::allocate(int count, int /*size*/)
                     mPrivateHandle[cnt]->size,
                     1,
                     mCallbackCookie);
-
-        CDBG("%s: idx = %d, fd = %d, size = %d, offset = %d",
+        ALOGV("%s: idx = %d, fd = %d, size = %d, offset = %d",
               __func__, cnt, mPrivateHandle[cnt]->fd,
               mPrivateHandle[cnt]->size,
               mPrivateHandle[cnt]->offset);

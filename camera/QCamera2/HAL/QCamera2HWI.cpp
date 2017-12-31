@@ -1601,10 +1601,10 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(cam_stream_type_t st
         {
             if (isNoDisplayMode()) {
                 mem = new QCameraStreamMemory(mGetMemory,
-                        mCallbackCookie,
-                        bCachedMem,
-                        (bPoolMem) ? &m_memoryPool : NULL,
-                        stream_type);
+                                              mCallbackCookie,
+                                              bCachedMem,
+                                              &m_memoryPool,
+                                              stream_type);
             } else {
                 cam_dimension_t dim;
                 QCameraGrallocMemory *grallocMemory =
@@ -1626,7 +1626,7 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(cam_stream_type_t st
             } else {
                 cam_dimension_t dim;
                 QCameraGrallocMemory *grallocMemory =
-                        new QCameraGrallocMemory(mGetMemory, mCallbackCookie);
+                    new QCameraGrallocMemory(mGetMemory, mCallbackCookie);
 
                 mParameters.getStreamDimension(stream_type, dim);
                 if (grallocMemory) {
@@ -1646,17 +1646,19 @@ QCameraMemory *QCamera2HardwareInterface::allocateStreamBuf(cam_stream_type_t st
     case CAM_STREAM_TYPE_METADATA:
     case CAM_STREAM_TYPE_OFFLINE_PROC:
         mem = new QCameraStreamMemory(mGetMemory,
-                mCallbackCookie,
-                bCachedMem,
-                (bPoolMem) ? &m_memoryPool : NULL,
-                stream_type);
+                                      mCallbackCookie,
+                                      bCachedMem,
+                                      &m_memoryPool,
+                                      stream_type);
         break;
     case CAM_STREAM_TYPE_VIDEO:
         {
-            //Use uncached allocation by default
-            bCachedMem = mParameters.isVideoBuffersCached();
-            CDBG_HIGH("%s: %s video buf allocated ", __func__,
-                    (bCachedMem == 0) ? "Uncached" : "Cached" );
+            char value[PROPERTY_VALUE_MAX];
+            property_get("persist.camera.mem.usecache", value, "1");
+            if (atoi(value) == 0) {
+                bCachedMem = QCAMERA_ION_USE_NOCACHE;
+            }
+            ALOGD("%s: vidoe buf using cached memory = %d", __func__, bCachedMem);
             QCameraVideoMemory *videoMemory = new QCameraVideoMemory(mGetMemory, mCallbackCookie, bCachedMem);
             mem = videoMemory;
             mVideoMem = videoMemory;
