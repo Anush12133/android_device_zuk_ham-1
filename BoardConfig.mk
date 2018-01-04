@@ -91,7 +91,7 @@ TARGET_USE_COMPAT_GRALLOC_ALIGN := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
 # Tap to wake
-TARGET_TAP_TO_WAKE_NODE :="/sys/devices/virtual/touch/tp_dev/gesture_on"
+TARGET_TAP_TO_WAKE_NODE :=/sys/devices/virtual/touch/tp_dev/gesture_on
 
 # Filesystem
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 20971520
@@ -198,7 +198,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 PROTOBUF_SUPPORTED := true
 
 # ANT+ - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this - TODO: Confirm this
-#BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
+BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
 ifeq ($(HOST_OS),linux)
   ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)

@@ -45,7 +45,7 @@ endif
 LOCAL_C_INCLUDES := \
         $(LOCAL_PATH)/../stack/common \
         frameworks/native/include \
-        frameworks/native/libs/nativewindow/include \
+        frameworks/native/libs/nativewindow/include/ \
         frameworks/native/include/media/openmax \
         hardware/qcom/display-caf/msm8974/libgralloc \
         hardware/qcom/media/msm8974/libstagefrighthw \

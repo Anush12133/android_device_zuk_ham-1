@@ -303,10 +303,10 @@ PRODUCT_PACKAGES += \
     libxml2
 
 # ANT+
-#PRODUCT_PACKAGES += \
-    #AntHalService \
-    #com.dsi.ant.antradio_library \
-    #libantradio
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
 
 # Enable Bluetooth HFP
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -370,9 +370,6 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-dalv
 
 # call hwui memory config
 $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
-
-# MSM8974 Headers
-PRODUCT_KERNEL_HEADERS := device/zuk/ham/kernel-headers
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
