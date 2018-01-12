@@ -99,11 +99,22 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libqomx_core \
+    libmmcamera_interface \
+    libmmjpeg_interface \
     android.hardware.camera.provider@2.4-impl-legacy \
     android.hardware.camera.provider@2.4-service \
     camera.device@1.0-impl-legacy \
     camera.msm8974 \
+    mm-jpeg-interface-test \
+    mm-qcamera-app \
     Snap
+
+# Camera configuration
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    camera.disable_zsl_mode=1 \
+    media.stagefright.legacyencoder=true \
+    media.stagefright.less-secure=true
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -159,9 +170,7 @@ PRODUCT_COPY_FILES += \
 
 # Healthd
 PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl \
-    android.hardware.health@1.0-convert \
-    android.hardware.health@1.0-service
+    android.hardware.health@1.0-impl 
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -202,6 +211,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles.xml \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/etc/media_profiles_V1_0.xml
 
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # Media
 PRODUCT_PACKAGES += \
@@ -253,13 +265,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    thermal.msm8974 \
-    android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service
-
-PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine.conf:system/etc/thermal-engine-8974.conf \
-    $(LOCAL_PATH)/configs/thermal-engine-vr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-vr.conf
+    $(LOCAL_PATH)/configs/thermal-engine-vr.conf:$system/etc/thermal-engine-vr.conf
 
 # VR
 PRODUCT_PACKAGES += \
