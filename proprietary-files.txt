@@ -20,6 +20,7 @@ vendor/lib/libbtnv.so
 
 # Camera
 vendor/bin/mm-qcamera-daemon
+vendor/lib/hw/camera.vendor.msm8974.so
 vendor/lib/libmmcamera_interface.so
 vendor/lib/libmmjpeg_interface.so
 vendor/lib/libqomx_core.so
@@ -100,6 +101,7 @@ vendor/lib/libqomx_jpegenc.so
 vendor/firmware/cpp_firmware_v1_1_1.fw
 vendor/firmware/cpp_firmware_v1_1_6.fw
 vendor/firmware/cpp_firmware_v1_2_0.fw
+vendor/firmware/cpp_firmware_v1_4_0.fw
 
 # DRM
 vendor/bin/qseecomd
@@ -110,7 +112,7 @@ vendor/lib/librpmb.so
 vendor/lib/libssd.so
 
 # Fingerprint
-vendor/lib/hw/fingerprint.msm8974.so
+vendor/lib/hw/fingerprint.vendor.msm8974.so
 vendor/lib/lib_fpc_tac_shared.so
 
 # GPS

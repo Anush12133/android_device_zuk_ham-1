@@ -1,3 +1,3 @@
 
-add_lunch_combo lineage_ham-userdebug
+add_lunch_combo gzosp_ham-userdebug
 
