@@ -168,10 +168,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/izat.conf:system/etc/izat.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf
 
-# Healthd
-PRODUCT_PACKAGES += \
-    android.hardware.health@1.0-impl 
-
 # Lights
 PRODUCT_PACKAGES += \
     lights.msm8974 \
