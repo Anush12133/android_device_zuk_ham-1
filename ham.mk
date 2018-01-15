@@ -242,11 +242,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.media.treble_omx=false
     camera.disable_treble=true
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-impl \
-    power.msm8974
-
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
@@ -411,3 +406,7 @@ $(call inherit-product-if-exists, frameworks/native/build/phone-xxhdpi-2048-hwui
 
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
+
+# Power
+PRODUCT_PACKAGES += \
+android.hardware.power@1.1-service-qti
