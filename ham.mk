@@ -230,8 +230,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti \
-    power.msm8974
+    android.hardware.power@1.1-service-qti 
 
 # Sensors
 PRODUCT_PACKAGES += \
