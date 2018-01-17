@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-MM_V4L2_DRIVER_LIST += msm8960
-MM_V4L2_DRIVER_LIST += msm8974
-MM_V4L2_DRIVER_LIST += msm8226
-MM_V4L2_DRIVER_LIST += msm8610
-MM_V4L2_DRIVER_LIST += msm_bronze
-MM_V4L2_DRIVER_LIST += msm8916
-
-ifeq ($(call is-board-platform-in-list,$(MM_V4L2_DRIVER_LIST)),true)
-  ifneq ($(USE_CAMERA_STUB),true)
-    ifneq ($(BUILD_TINY_ANDROID),true)
-      include $(call all-subdir-makefiles)
-    endif
-  endif
-endif
-=======
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,4 +27,18 @@ LOCAL_MODULE := libcamera_parameters_ext
 LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_STATIC_LIBRARY)
->>>>>>> c1ef4ae... op5: add CameraParameters extension from op3
+
+MM_V4L2_DRIVER_LIST += msm8960
+MM_V4L2_DRIVER_LIST += msm8974
+MM_V4L2_DRIVER_LIST += msm8226
+MM_V4L2_DRIVER_LIST += msm8610
+MM_V4L2_DRIVER_LIST += msm_bronze
+MM_V4L2_DRIVER_LIST += msm8916
+
+ifeq ($(call is-board-platform-in-list,$(MM_V4L2_DRIVER_LIST)),true)
+  ifneq ($(USE_CAMERA_STUB),true)
+    ifneq ($(BUILD_TINY_ANDROID),true)
+      include $(call all-subdir-makefiles)
+    endif
+  endif
+endif
