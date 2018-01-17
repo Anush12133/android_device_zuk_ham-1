@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -28,6 +29,8 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_STATIC_LIBRARY)
 
+=======
+>>>>>>> parent of 39ba99d... ham: add CameraParameters extension from op3
 MM_V4L2_DRIVER_LIST += msm8960
 MM_V4L2_DRIVER_LIST += msm8974
 MM_V4L2_DRIVER_LIST += msm8226
