@@ -36,12 +36,6 @@
         android:title="@string/navigation_bar_category" >
 
         <cyanogenmod.preference.CMSystemSettingSwitchPreference
-            android:key="navigation_bar_left"
-            android:title="@string/navigation_bar_left_title"
-            android:summary="@string/navigation_bar_left_summary"
-            android:defaultValue="false" />
-
-        <cyanogenmod.preference.CMSystemSettingSwitchPreference
                 android:key="navigation_bar_menu_arrow_keys"
                 android:title="@string/navigation_bar_arrow_keys_title"
                 android:summary="@string/navigation_bar_arrow_keys_summary"
@@ -69,12 +63,6 @@
             android:entryValues="@array/hardware_keys_action_values"
             android:persistent="false" />
 
-        <ListPreference
-            android:key="navigation_recents_long_press"
-            android:dialogTitle="@string/navigation_bar_recents_title"
-            android:title="@string/navigation_bar_recents_title"
-            android:persistent="false" />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -91,13 +79,6 @@
             android:title="@string/power_end_call_title"
             android:summary="@string/power_end_call_summary"
             android:persistent="false"/>
-
-        <cyanogenmod.preference.CMSystemSettingSwitchPreference
-            android:key="torch_long_press_power_gesture"
-            android:title="@string/torch_long_press_power_gesture_title"
-            android:summary="@string/torch_long_press_power_gesture_desc"
-            android:defaultValue="false"
-            cm:requiresConfig="@*android:bool/config_supportLongPressPowerWhenNonInteractive" />
 
         <ListPreference
             android:key="torch_long_press_power_timeout"

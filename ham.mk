@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/audio/audio_effects.xml:system/vendor/etc/audio_effects.xml \
     $(LOCAL_PATH)/audio/acdb/MTP_Bluetooth_cal.acdb:system/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP_General_cal.acdb:system/etc/acdbdata/MTP/MTP_General_cal.acdb \
     $(LOCAL_PATH)/audio/acdb/MTP_Global_cal.acdb:system/etc/acdbdata/MTP/MTP_Global_cal.acdb \
@@ -409,4 +408,6 @@ $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
 
 # Power
 PRODUCT_PACKAGES += \
-android.hardware.power@1.1-service-qti
+android.hardware.power@1.1-impl \
+power.msm8974 \
+
