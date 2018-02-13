@@ -411,3 +411,9 @@ PRODUCT_PACKAGES += \
 android.hardware.power@1.1-service-qti \
 power.msm8974 \
 
+# Health
+  PRODUCT_PACKAGES += \
+     android.hardware.health@1.0-convert \
+     android.hardware.health@1.0-impl \
+     android.hardware.health@1.0-service \
+
