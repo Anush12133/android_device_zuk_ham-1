@@ -408,7 +408,6 @@ $(call inherit-product-if-exists, vendor/zuk/ham/ham-vendor.mk)
 
 # Power
 PRODUCT_PACKAGES += \
-android.hardware.power@1.0-impl \
-android.hardware.power@1.0-service \
+android.hardware.power@1.1-service-qti \
 power.msm8974 \
 
